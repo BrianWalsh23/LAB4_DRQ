@@ -1,5 +1,6 @@
 import React from 'react';
 
+// We use Content.js here and its imported in App.js
 const Content = () => {
   return (
     <div>
