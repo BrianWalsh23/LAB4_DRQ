@@ -1,15 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import Content from './components/Content';
+import Footer from './components/Footer';
 
 function App() {
-
-  // Exercise 2 Display hello world on webpage
   return (
     <div>
-    <h1>Hello World!</h1>
-    {/* Exercise to Add time */}
-    <h2>It is {new Date().toLocaleTimeString()}.</h2>
-  </div>
+      <Header />
+      <Content />
+      <Footer />
+    </div>
   );
 }
 
