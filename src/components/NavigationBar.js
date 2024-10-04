@@ -12,7 +12,7 @@ const NavigationBar = () => {
             <Navbar.Brand href="/">Navbar</Navbar.Brand>
             <Nav className="me-auto">
                 {/* Link to HomePage */}
-              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/home">Home</Nav.Link>
               {/* Link to CreatePage */}
               <Nav.Link href="/create">Create</Nav.Link>
               {/* Link to ReadPage */}
