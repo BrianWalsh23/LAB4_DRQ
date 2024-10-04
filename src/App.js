@@ -10,7 +10,9 @@ function App() {
       <NavigationBar />
       <Routes>
         <Route path="/home" element={<Content />} />
+        {/* Exercise 6 updated to Footer */}
         <Route path="/read" element={<h1><Footer/></h1>} />
+        {/* Exercise 6 updated to Header */}
         <Route path="/create" element={<h1><Header/></h1>} />
       </Routes>
     </Router>
