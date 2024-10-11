@@ -16,7 +16,7 @@ const NavigationBar = () => {
               {/* Link to CreatePage */}
               <Nav.Link href="/create">Create</Nav.Link>
               {/* Link to ReadPage */}
-              <Nav.Link href="/read">Read</Nav.Link>
+              <Nav.Link href="/read">Read</Nav.Link>             
             </Nav>
           </Container>
       </Navbar>

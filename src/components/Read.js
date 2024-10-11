@@ -1,4 +1,5 @@
 // We use Read.js here and its imported in App.js
+import Movies from "./Movies";
 
 const Read = () => {
     // Add in JSON movie data
@@ -23,7 +24,13 @@ const Read = () => {
         "Type": "movie",
         "Poster": "https://m.media-amazon.com/images/M/MV5BNDQ4YzFmNzktMmM5ZC00MDZjLTk1OTktNDE2ODE4YjM2MjJjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
       }];
-    return <h3>Hello from read component</h3>;
+    return( 
+            <div>
+            <h3>Hello from read component</h3>
+            <Movies myMovies={data}/>
+            </div>
+        );
+    
   };
   // This gets called in app.js to use header function
   export default Read;
