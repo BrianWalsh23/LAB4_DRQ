@@ -6,9 +6,9 @@ import Content from './components/Content';
 
 function App() {
   return (
-    <Router>
-      <NavigationBar />
-      <Routes>
+    <Router> {/* Enable URL navigation */}
+      <NavigationBar />  {/* Call navigationbar from components */}
+      <Routes> {/* Manages different routes */}
         <Route path="/home" element={<Content />} />
         {/* Exercise 6 updated to Footer */}
         <Route path="/read" element={<h1><Footer/></h1>} />

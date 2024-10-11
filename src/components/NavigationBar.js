@@ -22,5 +22,5 @@ const NavigationBar = () => {
       </Navbar>
   );
 };
-
+// this gets called in app.js to use navbar template
 export default NavigationBar;

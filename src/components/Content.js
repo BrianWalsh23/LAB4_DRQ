@@ -9,5 +9,5 @@ const Content = () => {
     </div>
   );
 }
-
+// This gets called in app.js to use content function
 export default Content;
