@@ -1,11 +1,19 @@
+import { useEffect } from "react";
+import Card from 'react-bootstrap/Card';
+
 const MovieItem = (props) => {
     return(
-            <div>
-                <h3>{props.myMovie.Title}</h3>
-                <img src={props.myMovie.Poster}></img>
-                <p>{props.myMovie.Year}</p>
-
-            </div>
+        <div>
+            <Card>
+                <Card.Header>{props.myMovie.Title}</Card.Header>
+                <Card.Body>
+                    <blockquote className="blockquote mb-0">
+                        <img src={props.myMovie.Poster}></img>
+                        <footer>{props.myMovie.Year}</footer>
+                    </blockquote>
+                </Card.Body>
+            </Card>
+        </div>
         );
 }
 
