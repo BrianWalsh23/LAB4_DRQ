@@ -1,9 +1,9 @@
-import MovieItem from "../MovieItem";
+import MovieItem from "./MovieItem";
 
 const Movies = (props) => {
     return props.myMovies.map(
-        ()=>{
-            return <MovieItem/>
+        (movie)=>{
+            return <MovieItem myMovie={movie} key={movie.imdb}/>
         }
     );
 }
