@@ -4,15 +4,18 @@ import axios from "axios";
 import Movies from "./Movies";
 
 const Read = () => {
+  // useState comment
   const [movies, setMovies] = useState([]);
 
 
+      //
       useEffect(
         ()=>{
           // Runs in the background. Makes sure program doesn't hang
           // Requests data from the API
+          // axios commennts
           axios.get('https://jsonblob.com/api/jsonblob/1287718524221775872')
-          //
+          
           .then((response)=>{
             console.log(response.data);
             setMovies(response.data.movies);
