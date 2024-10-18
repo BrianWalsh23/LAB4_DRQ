@@ -4,7 +4,8 @@ import axios from "axios";
 import Movies from "./Movies";
 
 const Read = () => {
-  // useState comment
+  // UseState initializes and empty array. movies holds the movies and will be updated using the API
+  // setMovies is used when movie data is retrieved from the API setMovies(response.data.movies);
   const [movies, setMovies] = useState([]);
 
 
@@ -13,14 +14,15 @@ const Read = () => {
         ()=>{
           // Runs in the background. Makes sure program doesn't hang
           // Requests data from the API
-          // axios commennts
           axios.get('https://jsonblob.com/api/jsonblob/1287718524221775872')
           
           .then((response)=>{
+            // Log the response and update the state with movie data
             console.log(response.data);
             setMovies(response.data.movies);
           })
           .catch((error) => {
+            // Log any errors that occur during the request
             console.log(error);
           });
       }, []);
@@ -28,6 +30,7 @@ const Read = () => {
     return( 
             <div>
             <h3>Hello from read component</h3>
+            {/* Movie component is rendered. Passed myMovies then recieves movies which is populated from the API */}
             <Movies myMovies={movies}/>
             </div>
         );

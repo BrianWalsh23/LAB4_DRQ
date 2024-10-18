@@ -2,12 +2,15 @@
 import { useState } from "react";
 
 function Create() {
-  //
+  // Each state is initialized with an empty string
+  // Each has a variable to store their value and a set function for user typing into input field
   const [title, setTitle] = useState('');
   const [year, setYear] = useState('');
   const [poster, setPoster] = useState('');
 
-  //
+  // handleSubmit is called when the user clicks "Add movie", the values entered get logged to the console
+  // e.preventDefault normally when a form is submitted the browser refreshes the page 
+  // this prevents refresh so you keep the current state of the app
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(title);
@@ -18,13 +21,15 @@ function Create() {
   return (
     <div>
       <h2>This is my Create Component.</h2>
-      {/*  */}
+      {/* form onSubmit wraps the input fields and the submit button together */}
+      {/* The onSubmit event is set to trigger the handleSubmit function when the form is submitted. */}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Add Movie Title: </label>
           <input type="text"
             className="form-control"
             value={title}
+            
             onChange={(e) => { setTitle(e.target.value) }}
           />
           <label>Add Movie Year: </label>
